@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>He</title>
+    <meta name="author" content="Syful Islam" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="//purplepatch.online/assets/ico/favicon.ico"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: 100% 100% no-repeat;
+        cursor: pointer;
+        transition: all 0.7s ease;
+      }
+      body,
+      html {
+        height: 250px;
+        width: 300px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+      }
+      .absolute {
+        position: absolute;
+      }
+      .he_slide_1,
+      .he_slide_2 {
+        height: 250px;
+        width: 300px;
+        /* background: url("//ms.purplepatch.online/slideanim/emami/he-9-22/asset/01/bg.jpg"); */
+        top: 0px;
+        left: 0px;
+      }
+      .he_slide_2 {
+        background: url("asset/bg.jpg");
+        top: 0px;
+      }
+      .he_slide_2_all_text {
+        height: 65px;
+        width: 129px;
+        /* background-image: url("//ms.purplepatch.online/slideanim/emami/he-9-22/asset/150ml/02/copy.png"); */
+        top: 38px;
+        left: 150px;
+      }
+      [class^="he_slide_1_pack_"] {
+        height: 113px;
+        width: 38px;
+        top: 125px;
+        left: 55px;
+      }
+      .he_slide_1_pack_1 {
+        height: 122px;
+        width: 52px;
+        /* background: url("//ms.purplepatch.online/slideanim/emami/he-9-22/asset/150ml/01/01.png"); */
+        left: 55px;
+      }
+      .he_slide_1_pack_2 {
+        height: 121px;
+        width: 57px;
+        /* background: url("//ms.purplepatch.online/slideanim/emami/he-9-22/asset/150ml/01/02.png"); */
+        left: 108px;
+      }
+      .he_slide_1_pack_3 {
+        height: 122px;
+        width: 57px;
+        /* background: url("//ms.purplepatch.online/slideanim/emami/he-9-22/asset/150ml/01/04.png"); */
+        left: 161px;
+        background-repeat: no-repeat;
+      }
+      .he_slide_1_pack_4 {
+        height: 122px;
+        width: 66px;
+        /* background: url("//ms.purplepatch.online/slideanim/emami/he-9-22/asset/150ml/01/03.png"); */
+        left: 215px;
+      }
+      .he_slide_1_big_text {
+        height: 78px;
+        width: 179px;
+        /* background: url("//ms.purplepatch.online/slideanim/emami/he-9-22/asset/01/copy.png"); */
+        top: 45px;
+        left: 120px;
+      }
+      .he_slide_1_swipe_text {
+        height: 69px;
+        width: 79px;
+        /* background: url("//ms.purplepatch.online/slideanim/emami/he-9-22/asset/01/swipe.png"); */
+        top: 640px;
+        left: 190px;
+      }
+      .swipe_up {
+        animation: swipeup 0.75s ease infinite;
+      }
+      @keyframes swipeup {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      .one {
+        /* background: url("//ms.purplepatch.online/slideanim/emami/he-9-22/asset/150ml/01/01.png"); */
+        -webkit-animation: load 4s infinite;
+        animation: load 4s infinite;
+      }
+      .two {
+        /* background: url("//ms.purplepatch.online/slideanim/emami/he-9-22/asset/150ml/01/02.png"); */
+        -webkit-animation: load 4s infinite 1s;
+        animation: load 4s infinite 1s;
+      }
+      .three {
+        /* background: url("//ms.purplepatch.online/slideanim/emami/he-9-22/asset/150ml/01/04.png"); */
+        -webkit-animation: load 4s infinite 2s;
+        animation: load 4s infinite 2s;
+      }
+      .four {
+        /* background: url("//ms.purplepatch.online/slideanim/emami/he-9-22/asset/150ml/01/03.png"); */
+        -webkit-animation: load 4s infinite 3s;
+        animation: load 4s infinite 3s;
+      }
+      @keyframes load {
+        0%,
+        100% {
+          transform: scale(0.95);
+        }
+        50% {
+          transform: scale(1);
+        }
+      }
+      .he_slide_2_all {
+        height: 250px;
+        width: 300px;
+        /* background: url("//ms.purplepatch.online/slideanim/emami/he-9-22/asset/150ml/02/allpack.png"); */
+        top: 200px;
+        left: 0px;
+      }
+      .he_slide_2_selection {
+        height: 250px;
+        width: 300px;
+        background: url("asset/a.png");
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        display: none;
+        transition: all 0.25s ease;
+      }
+      .he_slide_2_cta {
+        height: 250px;
+        width: 300px;
+        background: url("asset/btn.png");
+        top: 0px;
+        left: 0px;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        animation: fadeIn 2s linear infinite;
+        animation-delay: 1s;
+      }
+      @keyframes fadeIn {
+            0% {opacity: 0;}
+            50% {opacity: 0;}
+            80% {opacity: 1;}
+            100% {opacity: 1;}
+      }
+      @keyframes bounceIn {
+        from,
+        20%,
+        40%,
+        60%,
+        80%,
+        to {
+          -webkit-animation-timing-function: cubic-bezier(
+            0.215,
+            0.61,
+            0.355,
+            1
+          );
+          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        0% {
+          opacity: 0;
+          -webkit-transform: scale3d(0.3, 0.3, 0.3);
+          transform: scale3d(0.3, 0.3, 0.3);
+        }
+        20% {
+          -webkit-transform: scale3d(1.1, 1.1, 1.1);
+          transform: scale3d(1.1, 1.1, 1.1);
+        }
+        40% {
+          -webkit-transform: scale3d(0.9, 0.9, 0.9);
+          transform: scale3d(0.9, 0.9, 0.9);
+        }
+        60% {
+          opacity: 1;
+          -webkit-transform: scale3d(1.03, 1.03, 1.03);
+          transform: scale3d(1.03, 1.03, 1.03);
+        }
+        80% {
+          -webkit-transform: scale3d(0.97, 0.97, 0.97);
+          transform: scale3d(0.97, 0.97, 0.97);
+        }
+        to {
+          opacity: 1;
+          -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="details" target="_blank" href="{CLICK_MACRO}">
+      <div class="he_slide_2 absolute">
+        <div class="he_slide_2_all absolute"></div>
+        <div class="he_slide_2_all_text absolute"></div>
+        <div class="he_slide_2_selection absolute"></div>
+        <div class="he_slide_2_cta absolute"></div></div
+    ></a>
+    <script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+      setTimeout(function () {
+        $(".he_slide_2_selection").css({
+          left: 35,
+          opacity: 0,
+          display: "block",
+        });
+        $(".he_slide_2_all").css({ top: 0 });
+        $(".he_slide_2").css({ top: 0 });
+        setTimeout(function () {
+          $(".he_slide_2_selection").css({
+            left: 10,
+            opacity: 1,
+            display: "block",
+          });
+        }, 500);
+      }, 200);
+      myflavor();
+      function myflavor() {
+        var myfla = 0;
+        setInterval(function () {
+          myfla++;
+          if (myfla == 1) {
+            $(".he_slide_2_selection").css({
+              background:
+                "url(asset/a.png)",
+            });
+          } else if (myfla == 2) {
+            $(".he_slide_2_selection").css({
+              background:
+                "url(asset/b.png)",
+            });
+          } else if (myfla == 3) {
+            $(".he_slide_2_selection").css({
+              background:
+                "url(asset/c.png)",
+            });
+          } else if (myfla == 4) {
+            $(".he_slide_2_selection").css({
+              background:
+                "url(asset/d.png)",
+            });
+          } else {
+            myfla = 0;
+          }
+        }, 1e3);
+      }
+    </script>
+  </body>
+</html>
